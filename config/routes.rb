@@ -1,5 +1,19 @@
 ProtoPom::Application.routes.draw do
-  get "proto/index"
+  get 'proto/index'
+  get 'proto/new'
+
+  ## Vanity URLs or other one-offs
+  #match '/auth/:provider/callback' => 'sessions#create'
+  #match '/auth/failure'            => 'dashboard#logged_out'
+  #match '/signout'                 => 'sessions#destroy', :as => :signout
+  #match '/logged_out'              => 'dashboard#logged_out'
+  #match '/version'                 => 'dashboard#version'
+  #
+  #match '/prototype-styles'        => 'prototype#styles'
+  #match '/prototype-styles-2'      => 'prototype#styles-2'
+  #match '/prototype-skus'          => 'prototype#skus'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

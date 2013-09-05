@@ -1,238 +1,44 @@
-<div class="container">
-  <h1>Proto#index</h1>
-  <p>Find me in app/views/proto/index.html.erb</p>
+<div class="container mt-2">
   <div class="row">
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-6 col-md-offset-3">
+      <article class="panel panel-default">
+        <header class="panel-heading clearfix">
+          <h4 class="pull-left">Purchase Orders</h4>
+          <%= link_to "Create a Draft PO", "/proto/new", class:"btn btn-primary pull-right" %>
+        </header>
+        <section class="panel-body">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="badge">Draft</span>
+              Mystree_<%= Time.now.strftime("%m-%d-%Y") %>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">New</span>
+              Mystree_<%= (Time.now - 1.days).strftime("%m-%d-%Y") %>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">Approved</span>
+              Mystree_<%= (Time.now - 2.days).strftime("%m-%d-%Y") %>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">Approved</span>
+              Mystree_<%= (Time.now - 3.days).strftime("%m-%d-%Y") %>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">Invoiced</span>
+              Mystree_<%= (Time.now - 4.days).strftime("%m-%d-%Y") %>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">Paid</span>
+              Mystree_<%= (Time.now - 5.days).strftime("%m-%d-%Y") %>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">Closed</span>
+              Mystree_<%= (Time.now - 6.days).strftime("%m-%d-%Y") %>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </div>
   </div>
-
-  <table class="table table-bordered table-striped">
-    <thead>
-    <tr>
-      <th></th>
-      <th>
-        Extra small devices
-        <small>Phones (&lt;768px)</small>
-      </th>
-      <th>
-        Small devices
-        <small>Tablets (≥768px)</small>
-      </th>
-      <th>
-        Medium devices
-        <small>Desktops (≥992px)</small>
-      </th>
-      <th>
-        Large devices
-        <small>Desktops (≥1200px)</small>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th>Grid behavior</th>
-      <td>Horizontal at all times</td>
-      <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
-    </tr>
-    <tr>
-      <th>Max container width</th>
-      <td>None (auto)</td>
-      <td>750px</td>
-      <td>970px</td>
-      <td>1170px</td>
-    </tr>
-    <tr>
-      <th>Class prefix</th>
-      <td><code>.col-xs-</code></td>
-      <td><code>.col-sm-</code></td>
-      <td><code>.col-md-</code></td>
-      <td><code>.col-lg-</code></td>
-    </tr>
-    <tr>
-      <th># of columns</th>
-      <td colspan="4">12</td>
-    </tr>
-    <tr>
-      <th>Max column width</th>
-      <td class="text-muted">Auto</td>
-      <td>60px</td>
-      <td>78px</td>
-      <td>95px</td>
-    </tr>
-    <tr>
-      <th>Gutter width</th>
-      <td colspan="4">30px (15px on each side of a column)</td>
-    </tr>
-    <tr>
-      <th>Nestable</th>
-      <td colspan="4">Yes</td>
-    </tr>
-    <tr>
-      <th>Offsets</th>
-      <td colspan="1" class="text-muted">N/A</td>
-      <td colspan="3">Yes</td>
-    </tr>
-    <tr>
-      <th>Column ordering</th>
-      <td class="text-muted">N/A</td>
-      <td colspan="3">Yes</td>
-    </tr>
-    </tbody>
-  </table>
-  <table class="table table-bordered table-striped">
-    <thead>
-    <tr>
-      <th></th>
-      <th>
-        Extra small devices
-        <small>Phones (&lt;768px)</small>
-      </th>
-      <th>
-        Small devices
-        <small>Tablets (≥768px)</small>
-      </th>
-      <th>
-        Medium devices
-        <small>Desktops (≥992px)</small>
-      </th>
-      <th>
-        Large devices
-        <small>Desktops (≥1200px)</small>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th>Grid behavior</th>
-      <td>Horizontal at all times</td>
-      <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
-    </tr>
-    <tr>
-      <th>Max container width</th>
-      <td>None (auto)</td>
-      <td>750px</td>
-      <td>970px</td>
-      <td>1170px</td>
-    </tr>
-    <tr>
-      <th>Class prefix</th>
-      <td><code>.col-xs-</code></td>
-      <td><code>.col-sm-</code></td>
-      <td><code>.col-md-</code></td>
-      <td><code>.col-lg-</code></td>
-    </tr>
-    <tr>
-      <th># of columns</th>
-      <td colspan="4">12</td>
-    </tr>
-    <tr>
-      <th>Max column width</th>
-      <td class="text-muted">Auto</td>
-      <td>60px</td>
-      <td>78px</td>
-      <td>95px</td>
-    </tr>
-    <tr>
-      <th>Gutter width</th>
-      <td colspan="4">30px (15px on each side of a column)</td>
-    </tr>
-    <tr>
-      <th>Nestable</th>
-      <td colspan="4">Yes</td>
-    </tr>
-    <tr>
-      <th>Offsets</th>
-      <td colspan="1" class="text-muted">N/A</td>
-      <td colspan="3">Yes</td>
-    </tr>
-    <tr>
-      <th>Column ordering</th>
-      <td class="text-muted">N/A</td>
-      <td colspan="3">Yes</td>
-    </tr>
-    </tbody>
-  </table>
-  <table class="table table-bordered table-striped">
-    <thead>
-    <tr>
-      <th></th>
-      <th>
-        Extra small devices
-        <small>Phones (&lt;768px)</small>
-      </th>
-      <th>
-        Small devices
-        <small>Tablets (≥768px)</small>
-      </th>
-      <th>
-        Medium devices
-        <small>Desktops (≥992px)</small>
-      </th>
-      <th>
-        Large devices
-        <small>Desktops (≥1200px)</small>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th>Grid behavior</th>
-      <td>Horizontal at all times</td>
-      <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
-    </tr>
-    <tr>
-      <th>Max container width</th>
-      <td>None (auto)</td>
-      <td>750px</td>
-      <td>970px</td>
-      <td>1170px</td>
-    </tr>
-    <tr>
-      <th>Class prefix</th>
-      <td><code>.col-xs-</code></td>
-      <td><code>.col-sm-</code></td>
-      <td><code>.col-md-</code></td>
-      <td><code>.col-lg-</code></td>
-    </tr>
-    <tr>
-      <th># of columns</th>
-      <td colspan="4">12</td>
-    </tr>
-    <tr>
-      <th>Max column width</th>
-      <td class="text-muted">Auto</td>
-      <td>60px</td>
-      <td>78px</td>
-      <td>95px</td>
-    </tr>
-    <tr>
-      <th>Gutter width</th>
-      <td colspan="4">30px (15px on each side of a column)</td>
-    </tr>
-    <tr>
-      <th>Nestable</th>
-      <td colspan="4">Yes</td>
-    </tr>
-    <tr>
-      <th>Offsets</th>
-      <td colspan="1" class="text-muted">N/A</td>
-      <td colspan="3">Yes</td>
-    </tr>
-    <tr>
-      <th>Column ordering</th>
-      <td class="text-muted">N/A</td>
-      <td colspan="3">Yes</td>
-    </tr>
-    </tbody>
-  </table>
 </div>
