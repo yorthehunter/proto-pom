@@ -6,11 +6,11 @@ common: &common
   password: stitchfix_production
 
 development:
-  database: stitchfix_dev
+  database: stitchfix_production
   <<: *common
 
 staging:
-  database: stitchfix_dev
+  database: stitchfix_production
   <<: *common
 
 test:
@@ -18,9 +18,9 @@ test:
   <<: *common
 
 production:
-  database: stitchfix_dev
+  database: stitchfix_production
   <<: *common
 
 readonly:
-  database: stitchfix_dev
+  database: stitchfix_production
   <<: *common

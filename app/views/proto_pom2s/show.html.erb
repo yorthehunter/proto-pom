@@ -1,0 +1,111 @@
+<%= debug @proto_pom2 %>
+
+<%= link_to "« Return to Index", "/proto/index", class:"btn btn-link pull-right" %>
+
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <article class="panel panel-default">
+        <header class="panel-heading clearfix">
+          <h4>
+            <span class="badge pull-right"><%= @proto_pom2.pp_status %></span>
+            PO <%= @proto_pom2.id%> -  <%= @proto_pom2.pp_vendor %>
+            <small><%= @proto_pom2.created_at.strftime("%m-%d-%Y") %></small>
+          </h4>
+        </header>
+        <section class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-6 mb-1">
+              <%= link_to "Create new style in draft", "/proto/index", class:"btn btn-primary" %>
+            </div>
+            <div class="col-md-6 mb-1">
+              <%= link_to "Add existing style to draft", "/proto/index", class:"btn btn-primary" %>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pp vendor:</strong>
+  <%= @proto_pom2.pp_vendor %>
+</p>
+
+<p>
+  <strong>Pp end date:</strong>
+  <%= @proto_pom2.pp_end_date %>
+</p>
+
+<p>
+  <strong>Pp start date:</strong>
+  <%= @proto_pom2.pp_start_date %>
+</p>
+
+<p>
+  <strong>Pp arrival date:</strong>
+  <%= @proto_pom2.pp_arrival_date %>
+</p>
+
+<p>
+  <strong>Pp notes:</strong>
+  <%= @proto_pom2.pp_notes %>
+</p>
+
+<p>
+  <strong>Pp po name:</strong>
+  <%= @proto_pom2.pp_po_name %>
+</p>
+
+<p>
+  <strong>Pp wholesale:</strong>
+  <%= @proto_pom2.pp_wholesale %>
+</p>
+
+<p>
+  <strong>Pp retail:</strong>
+  <%= @proto_pom2.pp_retail %>
+</p>
+
+<%= link_to 'Edit', edit_proto_pom2_path(@proto_pom2) %> |
+<%= link_to 'Back', proto_pom2s_path %>
+
+
+
+
+
+
+
+
+<!-- Button trigger modal -->
+<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Launch demo modal</a>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

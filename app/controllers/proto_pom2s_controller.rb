@@ -1,4 +1,4 @@
-class ProtoController < ApplicationController
+class ProtoPom2sController < ApplicationController
   before_action :set_proto_pom2, only: [:show, :edit, :update, :destroy]
 
   # GET /proto_pom2s
@@ -62,13 +62,13 @@ class ProtoController < ApplicationController
   end
 
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_proto_pom2
-    @proto_pom2 = ProtoPom2.find(params[:id])
-  end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_proto_pom2
+      @proto_pom2 = ProtoPom2.find(params[:id])
+    end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def proto_pom2_params
-    params.require(:proto_pom2).permit(:pp_vendor, :pp_end_date, :pp_start_date, :pp_arrival_date, :pp_notes, :pp_po_name, :pp_wholesale, :pp_retail, :pp_status)
-  end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def proto_pom2_params
+      params.require(:proto_pom2).permit(:pp_vendor, :pp_end_date, :pp_start_date, :pp_arrival_date, :pp_notes, :pp_po_name, :pp_wholesale, :pp_retail, :pp_status)
+    end
 end

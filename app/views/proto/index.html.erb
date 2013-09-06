@@ -12,6 +12,14 @@
               <span class="badge">Draft</span>
               Mystree_<%= Time.now.strftime("%m-%d-%Y") %>
             </li>
+            <% @proto_pom2s.each do |proto_pom2| %>
+              <li class="list-group-item">
+                <span class="badge"><%= proto_pom2.pp_status %></span>
+                <%= link_to(@proto_pom2s) do %>
+                  <%= proto_pom2.pp_vendor.parameterize %>_<%= proto_pom2.created_at.strftime("%m-%d-%Y") %>
+                <% end %>
+                </tr>
+            <% end %>
             <li class="list-group-item">
               <span class="badge">New</span>
               Mystree_<%= (Time.now - 1.days).strftime("%m-%d-%Y") %>

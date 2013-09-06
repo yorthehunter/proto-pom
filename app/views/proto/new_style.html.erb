@@ -1,0 +1,33 @@
+<%= debug params %>
+
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <article class="panel panel-default">
+        <header class="panel-heading clearfix">
+          <h4 class="pull-left">
+            <span class="badge">Draft</span>
+          </h4>
+          <%= link_to "« Return to Index", "/proto/index", class:"btn btn-link pull-right" %>
+        </header>
+        <section class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-6 mb-1">
+              <%= link_to "Create new style in draft", "/proto/index", class:"btn btn-primary" %>
+            </div>
+            <div class="col-md-6 mb-1">
+              <%= link_to "Add existing style to draft", "/proto/index", class:"btn btn-primary" %>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+</div>

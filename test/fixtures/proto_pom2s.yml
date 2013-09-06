@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pp_vendor: MyString
+  pp_end_date: MyString
+  pp_start_date: MyString
+  pp_arrival_date: MyString
+  pp_notes: MyString
+  pp_po_name: MyString
+  pp_wholesale: 1
+  pp_retail: 1
+
+two:
+  pp_vendor: MyString
+  pp_end_date: MyString
+  pp_start_date: MyString
+  pp_arrival_date: MyString
+  pp_notes: MyString
+  pp_po_name: MyString
+  pp_wholesale: 1
+  pp_retail: 1

@@ -12,6 +12,20 @@
           <%= link_to "« Return to Index", "/proto/index", class:"btn btn-link pull-right" %>
         </header>
         <section class="panel-body">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <%= params[:vendor].parameterize %>_<%= Time.now.strftime("%m-%d-%Y") %>
+            </div>
+            <div class="panel-body row">
+              <div class="col-md-6 mb-1">
+                <%= link_to "Create new style in draft", "/proto/new_style", class:"btn btn-primary" %>
+              </div>
+              <div class="col-md-6 mb-1">
+                <%= link_to "Add existing style to draft", "/proto/existing_style", class:"btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+
           <div class="row">
             <div class="col-md-6">
               <%= params[:vendor] %>
@@ -23,10 +37,10 @@
           <hr>
           <div class="row">
             <div class="col-md-6 mb-1">
-              <%= link_to "Create new style in draft", "/proto/index", class:"btn btn-primary" %>
+              <%= link_to "Create new style in draft", "/proto/new_style", class:"btn btn-primary" %>
             </div>
             <div class="col-md-6 mb-1">
-              <%= link_to "Add existing style to draft", "/proto/index", class:"btn btn-primary" %>
+              <%= link_to "Add existing style to draft", "/proto/existing_style", class:"btn btn-primary" %>
             </div>
           </div>
         </section>

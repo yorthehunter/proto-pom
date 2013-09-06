@@ -7,7 +7,18 @@
           <%= link_to "« Cancel", "/proto/index", class:"btn btn-link pull-right" %>
         </header>
         <section class="panel-body">
-          <form role="form">
+          <%= form_for(@proto_pom2) do |f| %>
+            <% if @proto_pom2.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@proto_pom2.errors.count, "error") %> prohibited this proto_pom2 from being saved:</h2>
+
+                <ul>
+                  <% @proto_pom2.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="vendor" class="control-label">Buyer</label>
@@ -31,49 +42,42 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="vendor" class="control-label">Vendor</label>
-              <select class="form-control" id="vendor" name="vendor" required>
-                <option>Select a Vendor</option>
-                <option>BB Dakota</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <%= f.label :pp_vendor, class:"control-label" %><br>
+              <%= f.text_field :pp_vendor, class:"form-control" %>
             </div>
             <div class="row">
               <div class="form-group col-md-6">
+                <%= f.label :pp_start_date, class:"control-label" %>
                 <label for="start_ship" class="control-label">Start Ship</label>
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                  <input id="start_ship" name="start_ship" type="datetime" class="form-control" placeholder="Select a Date" data-behaviour='datepicker' required>
+                  <%= f.text_field :pp_start_date, class:"form-control", :data => {:behaviour => "datepicker"} %>
                 </div>
               </div>
               <div class="form-group col-md-6">
-                <label for="end_ship" class="control-label">Cancel Ship</label>
+                <%= f.label :pp_end_date, class:"control-label" %>
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                  <input id="end_ship" name="end_ship" type="datetime" class="form-control" placeholder="Select a Date" data-behaviour='datepicker' required>
+                  <%= f.text_field :pp_end_date, class:"form-control", :data => {:behaviour => "datepicker"} %>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-md-6">
-                <label for="anticipated_ship" class="control-label">Anticipated Ship Date</label>
+                <%= f.label :pp_arrival_date, class:"control-label" %><br>
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                  <input id="anticipated_ship" name="anticipated_ship" type="datetime" class="form-control" placeholder="Optional" data-behaviour='datepicker'>
+                  <%= f.text_field :pp_arrival_date, class:"form-control", placeholder:"Optional", :data => {:behaviour => "datepicker"} %>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="notes" class="control-label">PO Notes</label>
-              <textarea class="form-control" placeholder="Optional"></textarea>
+              <%= f.label :pp_notes, class:"control-label" %><br>
+              <%= f.text_field :pp_notes, class:"form-control", placeholder:"Optional" %>
             </div>
-
-
-            <button type="submit" class="btn btn-primary" formaction="create_or_add">Create & Continue</button>
-          </form>
+            <%= f.hidden_field :pp_status, :value => "draft" %>
+            <%= f.submit %>
+          <% end %>
         </section>
       </article>
     </div>

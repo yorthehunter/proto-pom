@@ -1,0 +1,78 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <article class="panel panel-default">
+        <header class="panel-heading clearfix">
+          <h4 class="pull-left">Purchase Orders</h4>
+          <%= link_to "Create a Draft PO", "/proto/new", class:"btn btn-primary pull-right" %>
+        </header>
+        <section class="panel-body">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="badge">Draft</span>
+              Mystree_<%= Time.now.strftime("%m-%d-%Y") %>
+            </li>
+            <% @proto_pom2s.each do |proto_pom2| %>
+              <li class="list-group-item">
+                <span class="badge"><%= proto_pom2.pp_status %></span>
+                <%= link_to(proto_pom2) do %>
+                  <%= proto_pom2.pp_vendor.parameterize %>_<%= proto_pom2.created_at.strftime("%m-%d-%Y") %>
+                <% end %>
+              </tr>
+            <% end %>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<h1>Listing proto_pom2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pp vendor</th>
+      <th>Pp end date</th>
+      <th>Pp start date</th>
+      <th>Pp arrival date</th>
+      <th>Pp notes</th>
+      <th>Pp po name</th>
+      <th>Pp wholesale</th>
+      <th>Pp retail</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proto_pom2s.each do |proto_pom2| %>
+      <tr>
+        <td><%= proto_pom2.pp_vendor %></td>
+        <td><%= proto_pom2.pp_end_date %></td>
+        <td><%= proto_pom2.pp_start_date %></td>
+        <td><%= proto_pom2.pp_arrival_date %></td>
+        <td><%= proto_pom2.pp_notes %></td>
+        <td><%= proto_pom2.pp_po_name %></td>
+        <td><%= proto_pom2.pp_wholesale %></td>
+        <td><%= proto_pom2.pp_retail %></td>
+        <td><%= link_to 'Show', proto_pom2 %></td>
+        <td><%= link_to 'Edit', edit_proto_pom2_path(proto_pom2) %></td>
+        <td><%= link_to 'Destroy', proto_pom2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proto pom2', new_proto_pom2_path %>

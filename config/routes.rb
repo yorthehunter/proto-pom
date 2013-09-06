@@ -1,7 +1,11 @@
 ProtoPom::Application.routes.draw do
+  resources :proto_pom2s
+
   get 'proto/index'
   get 'proto/new'
   get 'proto/create_or_add'
+  get 'proto/new_style'
+  get 'proto/existing_style'
 
   ## Vanity URLs or other one-offs
   #match '/auth/:provider/callback' => 'sessions#create'

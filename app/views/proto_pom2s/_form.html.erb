@@ -1,0 +1,53 @@
+<%= form_for(@proto_pom2) do |f| %>
+  <% if @proto_pom2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@proto_pom2.errors.count, "error") %> prohibited this proto_pom2 from being saved:</h2>
+
+      <ul>
+      <% @proto_pom2.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pp_vendor %><br>
+    <%= f.text_field :pp_vendor %>
+  </div>
+  <div class="field">
+    <%= f.label :pp_end_date %><br>
+    <%= f.text_field :pp_end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :pp_start_date %><br>
+    <%= f.text_field :pp_start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :pp_arrival_date %><br>
+    <%= f.text_field :pp_arrival_date %>
+  </div>
+  <div class="field">
+    <%= f.label :pp_notes %><br>
+    <%= f.text_field :pp_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :pp_po_name %><br>
+    <%= f.text_field :pp_po_name %>
+  </div>
+  <div class="field">
+    <%= f.label :pp_wholesale %><br>
+    <%= f.number_field :pp_wholesale %>
+  </div>
+  <div class="field">
+    <%= f.label :pp_retail %><br>
+    <%= f.number_field :pp_retail %>
+  </div>
+  <div class="field">
+    <%= f.label :pp_status %><br>
+    <%= f.text_field :pp_status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
