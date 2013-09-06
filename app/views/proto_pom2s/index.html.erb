@@ -4,14 +4,10 @@
       <article class="panel panel-default">
         <header class="panel-heading clearfix">
           <h4 class="pull-left">Purchase Orders</h4>
-          <%= link_to "Create a Draft PO", "/proto/new", class:"btn btn-primary pull-right" %>
+          <%= link_to "Create a Draft PO", new_proto_pom2_path, class:"btn btn-primary pull-right" %>
         </header>
         <section class="panel-body">
           <ul class="list-group">
-            <li class="list-group-item">
-              <span class="badge">Draft</span>
-              Mystree_<%= Time.now.strftime("%m-%d-%Y") %>
-            </li>
             <% @proto_pom2s.each do |proto_pom2| %>
               <li class="list-group-item">
                 <span class="badge"><%= proto_pom2.pp_status %></span>

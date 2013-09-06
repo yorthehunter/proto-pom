@@ -1,6 +1,8 @@
 ProtoPom::Application.routes.draw do
   resources :proto_pom2s
 
+  root :to => 'proto_pom2s#index'
+
   get 'proto/index'
   get 'proto/new'
   get 'proto/create_or_add'
