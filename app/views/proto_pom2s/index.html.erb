@@ -14,7 +14,7 @@
                 <%= link_to(proto_pom2) do %>
                   <%= proto_pom2.pp_vendor.parameterize %>_<%= proto_pom2.created_at.strftime("%m-%d-%Y") %>
                 <% end %>
-              </tr>
+              </li>
             <% end %>
           </ul>
         </section>
@@ -23,18 +23,14 @@
   </div>
 </div>
 
+<div style="display:none;">
 
 
 
+  <h1>Listing proto_pom2s</h1>
 
-
-
-
-
-<h1>Listing proto_pom2s</h1>
-
-<table>
-  <thead>
+  <table>
+    <thead>
     <tr>
       <th>Pp vendor</th>
       <th>Pp end date</th>
@@ -48,9 +44,9 @@
       <th></th>
       <th></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @proto_pom2s.each do |proto_pom2| %>
       <tr>
         <td><%= proto_pom2.pp_vendor %></td>
@@ -66,9 +62,11 @@
         <td><%= link_to 'Destroy', proto_pom2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to 'New Proto pom2', new_proto_pom2_path %>
+  <%= link_to 'New Proto pom2', new_proto_pom2_path %>
+
+</div>

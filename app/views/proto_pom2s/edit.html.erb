@@ -1,6 +1,18 @@
-<h1>Editing proto_pom2</h1>
 
-<%= render 'form' %>
+<%= link_to "« Return to Index", root_path, class:"btn btn-link pull-right" %>
 
-<%= link_to 'Show', @proto_pom2 %> |
-<%= link_to 'Back', proto_pom2s_path %>
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <article class="panel panel-default">
+        <header class="panel-heading clearfix">
+          <h4 class="pull-left">Edit PO# <%= @proto_pom2.id%> -  <%= @proto_pom2.pp_vendor %></h4>
+          <%= link_to "« Cancel", @proto_pom2, class:"btn btn-link pull-right" %>
+        </header>
+        <section class="panel-body">
+          <%= render 'form' %>
+        </section>
+      </article>
+    </div>
+  </div>
+</div>
